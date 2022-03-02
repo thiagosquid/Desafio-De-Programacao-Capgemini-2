@@ -18,6 +18,7 @@ class DesafioCapgeminiTest {
     @Test
     void whenGivenAnArrayAndAValueItShouldReturnTheNumberOfCouplesOfSubtractionsEqualsToGivenValue() {
         assertEquals(3, desafioCapgemini.questao2(new int[]{1, 5, 3, 4, 2}, 2));
+        assertEquals(5, desafioCapgemini.questao2(new int[]{6, 5, 3, 4, 2, 1}, 1));
     }
 
     @Test
