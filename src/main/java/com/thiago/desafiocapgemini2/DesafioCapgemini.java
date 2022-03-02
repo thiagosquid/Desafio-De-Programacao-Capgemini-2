@@ -1,6 +1,9 @@
 package com.thiago.desafiocapgemini2;
 
+import java.math.BigInteger;
+import java.sql.Array;
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class DesafioCapgemini {
 
@@ -33,5 +36,47 @@ public class DesafioCapgemini {
         }
 
         return quantidade;
+    }
+
+    public String questao3(String entrada){
+        String encriptada = "";
+        String[] arr = entrada.split(" ");
+        String frase = Arrays.stream(arr).collect(Collectors.joining());
+        int tamanho = frase.length();
+        int linhas = (int) Math.ceil(Math.sqrt(tamanho));
+        int colunas = (int) Math.ceil(tamanho / Math.sqrt(tamanho));
+        String[][] encriptArr = new String[colunas][linhas];
+        int contador = 0;
+        int j = 0;
+
+        while (contador < tamanho) {
+            for (int i = 0; i < colunas; i++) {
+                encriptArr[j][i] = String.valueOf(frase.charAt(contador));
+                contador++;
+                if (contador == tamanho){
+                    break;
+                }
+            }
+            j++;
+        }
+
+        int k = 0;
+        int x = 1;
+
+        while(x < tamanho) {
+            for(int i = 0; i < linhas; i++){
+
+                if (k >= (tamanho % colunas) && encriptArr[i][k] == null) {
+                    continue;
+                }
+                encriptada += encriptArr[i][k];
+                x++;
+            }
+            k++;
+            encriptada += " ";
+        }
+
+
+        return encriptada.trim();
     }
 }

@@ -15,6 +15,12 @@ public class Main {
         int valor = 2;
         int quantidade = DESAFIO_CAPGEMINI.questao2(listaNumeros2, valor);
         System.out.println(quantidade);
+
+
+        System.out.println("==== Questão 3 ====");
+        String frase = "tenha um bom dia";
+        String fraseEncriptada = DESAFIO_CAPGEMINI.questao3(frase);
+        System.out.println(fraseEncriptada);
     }
 
 }
