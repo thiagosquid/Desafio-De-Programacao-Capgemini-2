@@ -66,7 +66,7 @@ public class DesafioCapgemini {
         while(x < tamanho) {
             for(int i = 0; i < linhas; i++){
 
-                if (k >= (tamanho % colunas) && encriptArr[i][k] == null) {
+                if (encriptArr[i][k] == null) {
                     continue;
                 }
                 encriptada += encriptArr[i][k];

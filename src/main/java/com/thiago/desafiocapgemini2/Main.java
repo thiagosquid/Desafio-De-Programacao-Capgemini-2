@@ -18,7 +18,7 @@ public class Main {
 
 
         System.out.println("==== Questão 3 ====");
-        String frase = "tenha um bom dia";
+        String frase = "o rato roeu a roupa do rei de roma";
         String fraseEncriptada = DESAFIO_CAPGEMINI.questao3(frase);
         System.out.println(fraseEncriptada);
     }
