@@ -1,5 +1,9 @@
 # Desafio-De-Programacao-Capgemini-2
 
+### Requisitos
+-[x] Java versão 11
+-[x] Maven instalado
+
 #### Para compilar e rodar os testes execute esse comando abaixo:
 ```mvn clean compile package```
 
